@@ -11,6 +11,8 @@ int main() {
   char Player1[20];
   char Player2[20];
 
+  // Área para definição das variáveis para armazenar as propriedades das cidades
+  
     char deck1;//Deck 1 e cartas
       char A01, A02, A03, A04; //ID das cidades
       char A01_nome, A02_nome, A03_nome, A04_nome;//Nomes das cidades
@@ -40,6 +42,8 @@ int main() {
 
     printf ("'SuperTrunfo - Países' iniciando...\n");
     printf ("Cada deck terá um limite de 8 Estados\n");
+
+  // Área para entrada de dados	
 
 //Cadastro do Player 1
     printf ("Insira o nome do Player 1:\n");
@@ -218,7 +222,7 @@ int main() {
     printf ("Densidade Populacional: %.2f\n", &B04_DensidadePopulacional, B04_DensidadePopulacional = B04_populacao/B04_area);
     printf ("PIB per Capita: %.2f\n", &B04_PIB_perCapita, B04_PIB_perCapita = B04_PIB/B04_populacao);
 
-
+  // Área para exibição dos dados da cidade
 
     
 
@@ -234,11 +238,11 @@ int main() {
 
 
 
-  // Área para definição das variáveis para armazenar as propriedades das cidades
 
-  // Área para entrada de dados
 
-  // Área para exibição dos dados da cidade
+
+
+
 
 
 } ;
