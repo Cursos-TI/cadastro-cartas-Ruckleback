@@ -107,6 +107,7 @@ A04_DensidadePopulacional = A04_populacao/A04_area;
 A04_PIB_perCapita = A04_PIB/A04_populacao;
 
 //Confirmação dos dados do Player 1
+printf("\n*** *** ***\n");//quebra de linha para melhor visualização dos dados
     printf ("***Confirmação dos dados:***\n");
     printf ("Carta 1: %s\n", A01_nome);
     printf ("População: %.2f\n", A01_populacao);
@@ -143,6 +144,8 @@ A04_PIB_perCapita = A04_PIB/A04_populacao;
     printf ("PIB per Capita: %.2f\n", A04_PIB_perCapita);
 
     printf ("Dados cadastrados com sucesso! Agora é a vez do Player 2 cadastrar suas cartas.\n");
+
+    
 //fim do cadastro do Player 1, início do cadastro do Player 2
 
 
@@ -208,6 +211,8 @@ A04_PIB_perCapita = A04_PIB/A04_populacao;
     B04_DensidadePopulacional = B04_populacao/B04_area;
     B04_PIB_perCapita = B04_PIB/B04_populacao;
 
+printf("\n*** *** ***\n");//quebra de linha para melhor visualização dos dados
+
     printf ("***Confirmação dos dados:***\n");
     printf ("Carta 1: %s\n", B01_nome);
     printf ("População: %.2f\n", B01_populacao);
@@ -240,6 +245,11 @@ A04_PIB_perCapita = A04_PIB/A04_populacao;
     printf ("Pontos turísticos: %d\n", B04_PontosTuristicos);
     printf ("Densidade Populacional: %.2f\n", B04_DensidadePopulacional);
     printf ("PIB per Capita: %.2f\n", B04_PIB_perCapita);
+    
+printf("\n*** *** ***\n");//quebra de linha para melhor visualização dos dados
+
+    printf ("Dados cadastrados com sucesso! Agora é hora de jogar!\n");
+    
 
   // Área para exibição dos dados da cidade
 
