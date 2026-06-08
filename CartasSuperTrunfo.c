@@ -1,15 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
+#include <time.h>
+
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main() {
+    
     setlocale(LC_ALL, "Portuguese_brazil");
   //Player 1 e Player 2
   char Player1[20];
-  char Player2[20];
+  int CPU, escolha;
+  srand (time(0));//Seed de Random.
 
   // Área para definição das variáveis para armazenar as propriedades das cidades
   
@@ -170,8 +175,7 @@ printf("\n*** *** ***\n");//quebra de linha para melhor visualização dos dados
 
 
 //Cadastro do Player 2
-    printf ("Insira o nome do Player 2:\n");
-    scanf ("%s", Player2);
+    printf ("Player 2: CPU Selecionado...\n");
 
     printf ("Insira o nome do deck do Player 2:\n");
     scanf ("%s", deck2);
@@ -300,21 +304,89 @@ printf("\n*** *** ***\n");//quebra de linha para melhor visualização dos dados
 
 printf("\n*** *** ***\n");//quebra de linha para melhor visualização dos dados
     
-    printf ("!!!SuperTrunfos ao combate!!!\n");
-    printf ("Super Trunfo da Carta 1 do Player 1: %.2f\n", A01_SuperTrunfo);
-    printf ("Super Trunfo da Carta 1 do Player 2: %.2f\n", B01_SuperTrunfo);
+    printf ("Escolha o parâmetro de comparação:\n");
+    printf("1. População    "); printf("2. PIB    "); printf("3. Área    "); printf("4. Pontos Turísticos\n");
+    printf("5. Combo: Densidade Populacional    "); printf("6. Combo: PIB Per Capita\n");
+    printf("7. *** SUPER TRUNFO ***\n");
+    scanf("%d", &escolha);
 
-printf("\n*** *** ***\n");//quebra de linha para melhor visualização dos dados
+    switch (escolha){
+        case 1:
+            if (A01_populacao > B01_populacao){
+                printf("\n### Vitória Populacional do Jogador 1! ###\n ");
+            } else if (A01_populacao < B01_populacao){
+                printf("\n### Vitória Populacional do Jogador 2! ###\n ");
+            } else {
+                printf("\n### Um empate Populacional! ###\n");
+            }
+        break;
+        case 2:
+            if (A01_PIB > B01_PIB){
+                printf("\n### Vitória Monetária do Jogador 1! ###\n ");
+            } else if (A01_PIB < B01_PIB){
+                printf("\n### Vitória Monetária do Jogador 2! ###\n ");
+            } else {
+                printf("\n### Um empate Monetário! ###\n");
+            }
+        break;
+        case 3:
+            if (A01_area > B01_area){
+                printf("\n### Vitória Espaçosa do Jogador 1! ###\n ");
+            } else if (A01_area < B01_area){
+                printf("\n### Vitória Espaçosa do Jogador 2! ###\n ");
+            } else {
+                printf("\n### Um empate Territorial! ###\n");
+            }
+        break;
+        case 4:
+            if (A01_PontosTuristicos > B01_PontosTuristicos){
+                printf("\n### Vitória Turística do Jogador 1! ###\n ");
+            } else if (A01_PontosTuristicos < B01_PontosTuristicos){
+                printf("\n### Vitória Turística do Jogador 2! ###\n ");
+            } else {
+                printf("\n### Um empate Turístico! ###\n");
+            }
+        break;
+        case 5:
+            if (A01_DensidadePopulacional < B01_DensidadePopulacional){
+                printf("\n### Vitória Lotada do Jogador 1! ###\n ");
+            } else if (A01_DensidadePopulacional > B01_DensidadePopulacional){
+                printf("\n### Vitória Lotada do Jogador 2! ###\n ");
+            } else {
+                printf("\n### Um empate sem Espaço pra ninguém! ###\n");
+            }
+        break;
+        case 6:
+            if (A01_PIB_perCapita > B01_PIB_perCapita){
+                printf("\n### Vitória Rica do Jogador 1! ###\n ");
+            } else if (A01_PIB_perCapita < B01_PIB_perCapita){
+                printf("\n### Vitória Rica do Jogador 2! ###\n ");
+            } else {
+                printf("\n### Um empate Classe Média! ###\n");
+            }
+        break;
+        case 7:
+            if (A01_SuperTrunfo > B01_SuperTrunfo){
+                printf("\n### Vitória SUPER TRUNFO do Jogador 1! ###\n ");
+            } else if (A01_SuperTrunfo < B01_SuperTrunfo){
+                printf("\n### Vitória SUPER TRUNFO do Jogador 2! ###\n ");
+            } else {
+                printf("\n### Um empate TRIUNFAL! ###\n");
+            }
+        break;
 
-    if (A01_SuperTrunfo > B01_SuperTrunfo) {
-        printf ("Player 1 venceu a rodada com a carta %s!\n", A01_nome);
-    } else if (B01_SuperTrunfo > A01_SuperTrunfo) {
-        printf ("Player 2 venceu a rodada com a carta %s!\n", B01_nome);
-    } else {
-        printf ("Empate! Ambas as cartas têm o mesmo valor de Super Trunfo.\n");
+    default:
+            printf("Comando inválido!\n\n");
+        
+
+            
+
+
     }
-
     
+  
+printf("\n*** *** ***\n");//quebra de linha para melhor visualização dos dados
+ 
 
 
     
